@@ -9,8 +9,8 @@ import TableCell from '@material-ui/core/TableCell';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import Header from './header';
-import {ReviewDialog} from './reviewComponent';
 
+import {ReviewDialog} from './reviewComponent';
 import {getReviewers} from '../services/api/reviews'
 
 class Review extends Component {

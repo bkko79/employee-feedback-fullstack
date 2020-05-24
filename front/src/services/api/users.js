@@ -1,3 +1,5 @@
+//Users table interface 
+
 export async function getUsers() {
   const response = await fetch('/users')
   const body = await response.json()

@@ -8,8 +8,9 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-import getUsers from '../services/api/users'
 import Header from './header';
+import getUsers from '../services/api/users'
+
 import {FormDialog, DeleteDialog } from './userComponent';
 import {AssignReviewDialog, ReviewResult} from './reviewComponent';
 

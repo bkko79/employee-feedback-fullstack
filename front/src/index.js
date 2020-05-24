@@ -14,6 +14,7 @@ const NoMatch = () => {
 };
 
 ReactDOM.render(
+  //Login or Authentication process is skipped.
   <Router>
     <Switch>
       <Route path="/" exact component={admin} />

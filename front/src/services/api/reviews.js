@@ -1,3 +1,5 @@
+//Reviews table interface 
+
 export async function getReviewers( userid ) {
   const response = await fetch('/reviews/reviewer/'+userid)
   const body = await response.json()
