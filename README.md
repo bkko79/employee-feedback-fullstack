@@ -11,7 +11,7 @@ mysqlやpostgresとの通信を真似する為にnode用ORMのsequelizeを使い
 0. 圧縮ファイルをnodeとnpmが使える場所に配置してください。
 1. ./front/から```npm install```や```yarn install```を実行して必要なnode_modulesを設置させてください。
 2. ./serverから```npm install```や```yarn install```を実行して必要なnode_modulesを設置させてください。
-3. ./serverから```yarn dev run```でfront/server両方を一緒に実行できます。
+3. ./serverから````npm run dev```や```yarn dev run```でfront/server両方を一緒に実行できます。
 4. http://localhost:3000/admin から全ての動作の確認ができます。
 
 ### ページリスト
