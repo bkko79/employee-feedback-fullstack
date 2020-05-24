@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     gender: DataTypes.ENUM('male', 'female', 'other'),
     position: DataTypes.STRING,
-    age: DataTypes.STRING
+    age: DataTypes.INTEGER
   }, {});
   
   Users.associate = function(models) {

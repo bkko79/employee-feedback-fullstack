@@ -6,6 +6,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import MenuItem from '@material-ui/core/MenuItem';
 
 import { addUser, editUser, deleteUser } from '../services/api/users';
 
@@ -47,7 +48,6 @@ export function FormDialog( {value, update} ) {
       })
       .then( (res) => {
         if (res.errors) console.log(res.errors[0].message)
-        setName(''); setPosition(''); setEmail(''); setAge(''); setGender('');
       })
     }
     update();
@@ -68,8 +68,12 @@ export function FormDialog( {value, update} ) {
           <TextField margin="dense" id="name" label="name" type="text" defaultValue={name} onInput={(e) => setName(e.target.value)} autoFocus fullWidth />
           <TextField margin="dense" id="position" label="position" type="text" onInput={(e) => setPosition(e.target.value)} defaultValue={position} fullWidth />
           <TextField margin="dense" id="email" label="email" type="email" onInput={(e) => setEmail(e.target.value)} defaultValue={email} fullWidth />
-          <TextField margin="dense" id="age" label="age" type="text" onInput={(e) => setAge(e.target.value)} defaultValue={age} />
-          <TextField margin="dense" id="gender" label="gender" type="text" onInput={(e) => setGender(e.target.value)} defaultValue={gender} />
+          <TextField margin="dense" id="age" label="age" type="number" onInput={(e) => setAge(e.target.value)} defaultValue={age} fullWidth/>
+          <TextField margin="dense" id="gender" label="gender" type="Select" value={gender} select onChange={(e) => setGender(e.target.value)} fullWidth>
+            <MenuItem key="male" value="male">male</MenuItem>
+            <MenuItem key="female" value="female">female</MenuItem>
+            <MenuItem key="other" value="other">other</MenuItem>
+          </TextField>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
