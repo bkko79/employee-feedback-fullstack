@@ -1,4 +1,4 @@
-# Paypay fullstack Coding Challenge manual
+#fullstack Coding Challenge manual
 
 ## 紹介
 
